@@ -27,7 +27,6 @@ void detectObjects(cv::Mat& img, std::vector<BoundingBox>& bBoxes, float confThr
     cv::dnn::Net net = cv::dnn::readNetFromDarknet(modelConfiguration, modelWeights);
     net.setPreferableBackend(cv::dnn::DNN_BACKEND_OPENCV);
     net.setPreferableTarget(cv::dnn::DNN_TARGET_CPU);
-    
     // generate 4D blob from input image
     cv::Mat blob;
     vector<cv::Mat> netOutput;
@@ -46,7 +45,6 @@ void detectObjects(cv::Mat& img, std::vector<BoundingBox>& bBoxes, float confThr
     names.resize(outLayers.size());
     for (size_t i = 0; i < outLayers.size(); ++i) // Get the names of the output layers in names
         names[i] = layersNames[outLayers[i] - 1];
-    
     // invoke forward propagation through network
     net.setInput(blob);
     net.forward(netOutput, names);
