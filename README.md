@@ -177,7 +177,7 @@ We do this by using the distance between all keypoints on the vehicle relative t
 
 <p align="center">
 
-<img src="images/CameraTTC-3.jpg" width=1000>
+<img src="images/CamTTC.jpg" width=1000>
 </p>
 In (a), a set of keypoints has been detected and the relative distances between keypoints 1-7 have been computed. In (b), 4 keypoints have been matched between successive frames (with keypoint 3 being a mismatch). The ratio of all relative distances between each other can be used to compute a reliable TTC estimate by replacing the height ratio h_1 / h_0 with the mean or median of all distance ratios d_k / d_k'.
 
